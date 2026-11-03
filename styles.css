@@ -199,7 +199,7 @@ a:hover { color: var(--code); }
 }
 .p-head { grid-area: head; }
 .p-lede { grid-area: lede; margin-top: 1rem; max-width: 40rem; }
-.p-aside { grid-area: aside; margin-top: 0.4rem; position: sticky; top: 1.5rem; }
+.p-aside { grid-area: aside; margin-top: 0.4rem; }
 .p-points { grid-area: points; }
 .p-results { grid-area: results; }
 .p-fig { grid-area: fig; }
@@ -274,7 +274,7 @@ a:hover { color: var(--code); }
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "head" "lede" "aside" "points" "results" "fig";
   }
-  .p-aside { max-width: 24rem; margin-top: 1.5rem; position: static; }
+  .p-aside { max-width: 24rem; margin-top: 1.5rem; }
 }
 
 @media (max-width: 56rem) {
