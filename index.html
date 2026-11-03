@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Numan Farukh – AI Engineer</title>
+<meta name="description" content="AI engineer building LLM agents, retrieval and document-intelligence systems with tests and evaluation gates. Remote from Lahore (UTC+5), available for EU and US overlap.">
+<meta name="theme-color" content="#0a1120" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f8fb" media="(prefers-color-scheme: light)">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Numan Farukh – AI Engineer">
+<meta property="og:description" content="LLM agents, RAG and document intelligence where the model reads and software decides. Projects, demos and resume.">
+<meta property="og:url" content="https://fanuman.github.io/">
+<meta property="og:image" content="https://fanuman.github.io/assets/img/numan.jpg">
+<meta name="twitter:card" content="summary">
+
+<link rel="preload" href="assets/fonts/inter-display-600.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/inter-400.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Numan Farukh",
+  "jobTitle": "AI Engineer",
+  "url": "https://fanuman.github.io/",
+  "image": "https://fanuman.github.io/assets/img/numan.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+  "sameAs": [
+    "https://github.com/fanuman",
+    "https://www.linkedin.com/in/numan-farukh-9864251b9/"
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">Numan Farukh</a>
+    <nav aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="wrap hero" id="top">
+    <div class="hero-copy">
+      <h1>AI engineer building systems where the model reads and software decides.</h1>
+      <p class="hero-lead">I'm Numan Farukh. I build LLM agents, retrieval and document-intelligence systems, ship them to AWS, and measure them with tests and evaluation gates. More than eight years of full-stack engineering sit underneath. I work remotely from Lahore (UTC+5).</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See the projects</a>
+        <a class="btn" href="assets/Numan_Farukh_Resume.pdf">Resume (PDF)</a>
+      </div>
+      <ul class="elsewhere" aria-label="Elsewhere">
+        <li><a href="https://github.com/fanuman" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/numan-farukh-9864251b9/" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:numanfarukh22@gmail.com">numanfarukh22@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <figure class="loop" id="loop">
+      <div class="loop-head">
+        <p class="loop-title">A misread total, caught by code</p>
+        <button class="replay" type="button" id="replay">Replay</button>
+      </div>
+
+      <div class="doc" id="doc" data-state="idle" role="group" aria-label="Synthetic carrier invoice">
+        <div class="doc-row"><span>Ocean freight</span><span>3,200.00</span></div>
+        <div class="doc-row"><span>Terminal handling</span><span>650.00</span></div>
+        <div class="doc-row"><span>Documentation</span><span>345.00</span></div>
+        <div class="doc-row total"><span>Total printed on the invoice</span><span>USD 4 195.00</span></div>
+      </div>
+
+      <ol class="trace">
+        <li class="step model"><span class="who">Model</span><p>Reads the total as <b>195.00</b>.</p></li>
+        <li class="step code bad"><span class="who">Code</span><p>The lines add up to <b>4,195.00</b>, not 195.00. Mismatch.</p></li>
+        <li class="step code"><span class="who">Code</span><p>Sends the model a hint made of facts only: the lines add up to 4,195.00.</p></li>
+        <li class="step model"><span class="who">Model</span><p>Reads the total again: <b>4,195.00</b>.</p></li>
+        <li class="step code ok"><span class="who">Code</span><p>4,195.00 matches the lines. The check passes.</p></li>
+      </ol>
+
+      <figcaption>The repair loop in FreightLens, simplified from a synthetic test case. After three reads without a match, the document goes to a person.</figcaption>
+    </figure>
+  </section>
+
+  <div class="wrap">
+
+    <section class="section" id="projects" aria-labelledby="h-projects">
+      <h2 id="h-projects">Projects</h2>
+      <div class="content">
+
+        <article class="project">
+          <header class="p-head">
+            <h3>FreightLens</h3>
+            <p class="status">Multi-tenant freight document intelligence. Deployed to AWS for testing, then torn down. All data is synthetic.</p>
+          </header>
+
+          <p class="lede p-lede">Upload a carrier quote and an invoice, and FreightLens reads the charges, checks the arithmetic and flags what needs a person. It follows one rule: the LLM only copies text out of messy documents, and plain code decides everything else.</p>
+
+          <aside class="p-aside">
+            <a class="poster" href="https://drive.google.com/file/d/1Ans79KVIUGE9cpHE9ucLtyvN3p2G8r8J/view" target="_blank" rel="noopener">
+              <img src="assets/img/freightlens-demo.jpg" width="1200" height="815" loading="lazy" alt="FreightLens demo video poster: check every freight invoice against its quote. The LLM reads, software decides.">
+            </a>
+            <ul class="p-links">
+              <li><a href="https://drive.google.com/file/d/1Ans79KVIUGE9cpHE9ucLtyvN3p2G8r8J/view" target="_blank" rel="noopener">Watch the 3-minute demo</a></li>
+              <li><a href="https://github.com/fanuman/freight-doc-intelligence" target="_blank" rel="noopener">Source code on GitHub</a></li>
+            </ul>
+            <p class="stack">Python, LangGraph, LangSmith, OpenAI, FastAPI, PostgreSQL, Next.js and TypeScript, Terraform, AWS.</p>
+          </aside>
+
+          <ul class="points p-points">
+            <li>A LangGraph pipeline with a repair loop. When the charge lines don't add up to the printed total, the extractor is re-prompted with the computed mismatch, never with the answer, for at most three reads.</li>
+            <li>A review step that pauses and resumes. The graph saves its state in Postgres and waits for a person to approve, correct or reject, so a paused review survives a server restart.</li>
+            <li>Tenant isolation in the database itself: row-level security on every table, composite (tenant_id, id) foreign keys and JWT auth, not only checks in application code.</li>
+            <li>Reconciliation in plain code with integer cents. It finds seven kinds of discrepancy, and when it can't tell which quote an invoice belongs to, it stops and asks instead of guessing.</li>
+            <li>A quality gate in CI. Every push runs the tests and the evaluation harness against a throwaway Postgres, and fails if any metric drops below its threshold.</li>
+            <li>Deployed with Terraform to ECS Fargate, ALB, RDS and S3, verified, then torn down, with a one-command redeploy.</li>
+          </ul>
+
+          <div class="p-results">
+            <h4>Results on 90 synthetic documents</h4>
+            <dl class="results">
+              <div><dt>Charge extraction F1</dt><dd>78.5% to 100%</dd></div>
+              <div><dt>Invoices with a wrong total that were flagged</dt><dd>5 of 5</dd></div>
+              <div><dt>False alarms on correct invoices</dt><dd>0 of 40</dd></div>
+              <div><dt>Prompt-injection invoices that leaked into the output</dt><dd>0 of 7</dd></div>
+              <div><dt>Tests run on every push</dt><dd>235</dd></div>
+              <div><dt>Cost of a full evaluation run</dt><dd>about $0.03</dd></div>
+            </dl>
+            <p class="note">The documents come from my own generator, which saves the correct answers, and I tuned the prompt on the same documents I scored it on. The numbers show the system works on this dataset. They don't say how accurate it would be on real freight documents.</p>
+          </div>
+
+          <figure class="wide p-fig">
+            <img src="assets/img/freightlens-flow.png" width="1600" height="987" loading="lazy" alt="Flow of the FreightLens agent: parse, classify, route, then extract the quote or invoice, validate the numbers with a re-read loop of up to three reads, human review that pauses with state saved in Postgres, and a separate code-only comparison with the quote.">
+            <figcaption>How the agent works. Amber steps call the model and only read. Teal steps are plain code. Purple is a person.</figcaption>
+          </figure>
+        </article>
+
+        <article class="project">
+          <header class="p-head">
+            <h3>TrailPeak Support Agent</h3>
+            <p class="status">RAG agent for a fictional outdoor-gear store. Deployed to AWS with Terraform and CI/CD.</p>
+          </header>
+
+          <p class="lede p-lede">A support chat that answers from the store's documents and live tools, never from the model's memory, and shows its work: the documents it searched, the stock checks it ran and the sources behind each answer.</p>
+
+          <aside class="p-aside">
+            <a class="poster" href="https://drive.google.com/file/d/1zpXfgcKm5tuqJWjYopijKvnInnla-8HL/view" target="_blank" rel="noopener">
+              <img src="assets/img/trailpeak-demo.jpg" width="1200" height="815" loading="lazy" alt="TrailPeak demo video poster: a support agent that reads photos. Every answer shows its sources.">
+            </a>
+            <ul class="p-links">
+              <li><a href="https://drive.google.com/file/d/1zpXfgcKm5tuqJWjYopijKvnInnla-8HL/view" target="_blank" rel="noopener">Watch the 3-minute demo</a></li>
+              <li><a href="https://github.com/fanuman/trailpeak-support-agent" target="_blank" rel="noopener">Source code on GitHub</a></li>
+            </ul>
+            <p class="stack">Python, FastAPI, OpenAI (GPT-4o-mini and vision), Chroma, Redis, LangSmith, Docker, Terraform, AWS ECS Fargate, GitHub Actions.</p>
+          </aside>
+
+          <ul class="points p-points">
+            <li>A ReAct agent over retrieval and live price and stock tools, streamed to the browser over Server-Sent Events so users watch each step as it happens.</li>
+            <li>Follow-up questions on a stateless server: the browser sends the last three exchanges, and the app rewrites each follow-up into a standalone question before searching.</li>
+            <li>Photo questions: GPT-4o vision describes the image and the description drives the search. Photos are checked by file signature, treated as data, and never cached or stored.</li>
+            <li>Cost and abuse controls: a Redis semantic cache, Redis-backed rate limiting load-tested with Locust, per-request cost tracking, and CloudWatch alarms proven with a deliberate fire drill.</li>
+            <li>Three containers on ECS Fargate, built with Terraform and GitHub Actions. The OpenAI key lives in Secrets Manager and reaches the app through an IAM task role.</li>
+            <li>An evaluation harness with regression detection and prompt A/B testing, traced in LangSmith.</li>
+          </ul>
+
+          <div class="p-results">
+            <h4>Latest evaluation on the golden set</h4>
+            <dl class="results">
+              <div><dt>Faithfulness</dt><dd>0.93</dd></div>
+              <div><dt>Answer relevancy</dt><dd>0.96</dd></div>
+              <div><dt>Context precision</dt><dd>1.00</dd></div>
+              <div><dt>Context recall</dt><dd>0.80</dd></div>
+              <div><dt>Tests</dt><dd>143</dd></div>
+            </dl>
+            <p class="note">Scores come from the project's golden question set about a fictional store. I use them to catch regressions and compare prompts, not as a benchmark.</p>
+          </div>
+
+          <figure class="wide p-fig">
+            <img src="assets/img/trailpeak-ui.jpg" width="1200" height="735" loading="lazy" alt="TrailPeak web UI answering how much a rain jacket and trekking poles cost together: a trail of steps (searched documents, two live stock checks, added the prices), the answer, two product cards with price and stock, and a source chip.">
+            <figcaption>The web UI shows each step the agent takes, the live stock checks, and the sources behind the answer.</figcaption>
+          </figure>
+        </article>
+
+        <div class="more">
+          <h3 class="more-h">More projects</h3>
+
+          <article class="mini">
+            <div class="mini-top">
+              <h4>InfoBud lead enrichment</h4>
+              <span class="chip">Client proof of concept, code private</span>
+            </div>
+            <p>Built the full stack of a lead-enrichment and campaign-matching platform for 100Days. It imports leads from CSV, scrapes each company's website with Firecrawl, extracts structured company data with an LLM, and scores each lead against campaign profiles. Enrichment runs as async TaskIQ workers on Redis with LangGraph workflows, and progress streams to a React UI over Server-Sent Events.</p>
+            <p class="stack">Python, FastAPI, LangGraph, LangChain, Groq, Firecrawl, TaskIQ, Redis, PostgreSQL, React, Docker.</p>
+          </article>
+
+          <article class="mini">
+            <div class="mini-top">
+              <h4>Magnifico voice agent</h4>
+              <span class="chip">In progress, private repository</span>
+            </div>
+            <p>A real-time phone sales agent for a motorcycle leather-gear manufacturer. It answers calls on a Telnyx number and holds a live speech-to-text, LLM and text-to-speech conversation, with natural turn-taking and barge-in. The persona discloses that it is an AI, never quotes prices or lead times, and hands quotes to the sales team. Next: lead capture through tool calling and catalogue retrieval.</p>
+            <p class="stack">Python, Pipecat, Deepgram, OpenAI, Telnyx, Docker.</p>
+          </article>
+
+          <article class="mini">
+            <div class="mini-top">
+              <h4>Automated examination evaluation system</h4>
+              <span class="chip">Final-year project, 2020</span>
+            </div>
+            <p>Generates candidate-specific exam papers and grades multiple-choice answer sheets from scans using OpenCV, OCR and bubble-sheet detection. Grading was distributed with PySpark across 50+ lab computers, which returned results for 5–7k entry-test candidates in 2–3 hours instead of days. It matched manual grading almost exactly on past batches, with damaged sheets sent to a person, and graded 20,000+ papers.</p>
+            <p class="stack">Python, OpenCV, OCR, PySpark.</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="h-experience">
+      <h2 id="h-experience">Experience</h2>
+      <div class="content">
+        <ol class="timeline">
+          <li>
+            <p class="when">Nov 2024 – now</p>
+            <div>
+              <p class="role">PodLead, LLM agent training data for Google Gemini</p>
+              <p class="org">NeuralFlex, remote contract</p>
+              <p>Lead about 12 ML engineers who design agentic tool-use scenarios: a realistic user query, a case description, and initial and final assertions that define the expected end state. Each scenario is implemented as a Colab notebook that drives Slack and Google Docs APIs in a mock environment. I also co-build and update the automated reviewer that checks every scenario against the project guidelines before human sign-off. I joined in May 2024 as an ML engineer and was promoted after six months.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Aug 2025 – Jan 2026</p>
+            <div>
+              <p class="role">Software engineer, contract</p>
+              <p class="org">100Days, Germany, remote</p>
+              <p>Built the InfoBud lead-enrichment proof of concept end to end, from the Python and LangGraph workers to the React UI and the integration tests.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">May 2022 – Feb 2024</p>
+            <div>
+              <p class="role">Full stack developer</p>
+              <p class="org">100Days, Germany, remote</p>
+              <p>Built core features of a German cash-desk SaaS with Django, Django REST Framework and Vue/Nuxt in a team of six, integrated the Fiskaly API for fiscal compliance, and wrote reusable DRF ViewSets and mixins shared across apps.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Nov 2020 – Apr 2022</p>
+            <div>
+              <p class="role">Senior software engineer, contract</p>
+              <p class="org">Lemonade Stand, Batchbud, Loud Now Agency, N3 Digital and Drip Marketing, United States and Serbia</p>
+              <p>Five successive engagements building client products with Django, GraphQL, Vue/Nuxt and Next.js: an e-commerce store and WordPress migration on Saleor, payments and JWT authentication, onboarding, chat and notifications, and Google API integrations, on AWS EC2 and S3.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">Mar 2018 – Oct 2020</p>
+            <div>
+              <p class="role">Full stack web developer</p>
+              <p class="org">FamCodings, Pakistan</p>
+              <p>Built a large customizable e-commerce platform for a startup with live messaging and Google integrations, and rewrote a social-media site from Laravel to Django.</p>
+            </div>
+          </li>
+          <li>
+            <p class="when">2016 – 2020</p>
+            <div>
+              <p class="role">BSc Information Technology</p>
+              <p class="org">Punjab University College of Information Technology, Lahore</p>
+              <p>CGPA 3.90 out of 4.00, batch topper, multiple scholarships.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="more-link">The <a href="assets/Numan_Farukh_Resume.pdf">resume</a> has the full detail for each role.</p>
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="h-skills">
+      <h2 id="h-skills">Skills</h2>
+      <div class="content">
+        <dl class="skills">
+          <div><dt>AI and LLM</dt><dd>RAG, hybrid search (BM25 and vectors with reciprocal rank fusion), cross-encoder re-ranking, ReAct agents, LangGraph, LangChain, structured output, vision models, evaluation (LLM-as-judge, regression and A/B tests), LangSmith, prompt-injection defence, semantic caching, real-time voice agents, OpenCV.</dd></div>
+          <div><dt>Backend</dt><dd>Python, FastAPI, Django and DRF, GraphQL, Celery, PostgreSQL (row-level security), Redis, TaskIQ, PySpark.</dd></div>
+          <div><dt>Frontend</dt><dd>TypeScript, React and Next.js, Vue and Nuxt.</dd></div>
+          <div><dt>Cloud and DevOps</dt><dd>AWS (ECS Fargate, ALB, RDS, ECR, S3, IAM, Secrets Manager, CloudWatch, Lambda), Terraform, Docker and Compose, GitHub Actions, Locust, Kubernetes basics with Minikube.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="h-about">
+      <h2 id="h-about">About</h2>
+      <div class="content about">
+        <img class="portrait" src="assets/img/numan.jpg" width="720" height="720" loading="lazy" alt="Portrait of Numan Farukh">
+        <div class="about-text">
+          <p>I'm an AI engineer in Lahore with more than eight years of full-stack work behind me, for clients in the US, Germany and Serbia. Since 2024 my focus has been LLM systems: agents, retrieval, document extraction, and the evaluation that tells you whether they work.</p>
+          <p>At NeuralFlex I lead about 12 ML engineers designing and evaluating agentic tool-use data for Google Gemini. The projects above are where I practise the same discipline on my own: let the model read, let code decide, and measure everything.</p>
+          <p class="avail">I'm open to remote roles. I work from UTC+5 with flexible hours and can overlap with EU and US working hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">Contact</h2>
+      <div class="content">
+        <p class="lede">If you're hiring for an AI engineer role, or want to talk about a project, email is the quickest way to reach me.</p>
+        <p class="mail"><a href="mailto:numanfarukh22@gmail.com">numanfarukh22@gmail.com</a></p>
+        <ul class="elsewhere">
+          <li><a href="https://www.linkedin.com/in/numan-farukh-9864251b9/" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/fanuman" rel="noopener">GitHub</a></li>
+          <li><a href="assets/Numan_Farukh_Resume.pdf">Resume (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 Numan Farukh. Demo videos are hosted on Google Drive. All project data shown is synthetic.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
