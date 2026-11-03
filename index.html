@@ -67,29 +67,16 @@
       </ul>
     </div>
 
-    <figure class="loop" id="loop">
-      <div class="loop-head">
-        <p class="loop-title">A misread total, caught by code</p>
-        <button class="replay" type="button" id="replay">Replay</button>
-      </div>
-
-      <div class="doc" id="doc" data-state="idle" role="group" aria-label="Synthetic carrier invoice">
-        <div class="doc-row"><span>Ocean freight</span><span>3,200.00</span></div>
-        <div class="doc-row"><span>Terminal handling</span><span>650.00</span></div>
-        <div class="doc-row"><span>Documentation</span><span>345.00</span></div>
-        <div class="doc-row total"><span>Total printed on the invoice</span><span>USD 4 195.00</span></div>
-      </div>
-
-      <ol class="trace">
-        <li class="step model"><span class="who">Model</span><p>Reads the total as <b>195.00</b>.</p></li>
-        <li class="step code bad"><span class="who">Code</span><p>The lines add up to <b>4,195.00</b>, not 195.00. Mismatch.</p></li>
-        <li class="step code"><span class="who">Code</span><p>Sends the model a hint made of facts only: the lines add up to 4,195.00.</p></li>
-        <li class="step model"><span class="who">Model</span><p>Reads the total again: <b>4,195.00</b>.</p></li>
-        <li class="step code ok"><span class="who">Code</span><p>4,195.00 matches the lines. The check passes.</p></li>
-      </ol>
-
-      <figcaption>The repair loop in FreightLens, simplified from a synthetic test case. After three reads without a match, the document goes to a person.</figcaption>
-    </figure>
+    <div class="featured">
+      <a class="feat" href="#freightlens">
+        <span class="feat-name">FreightLens</span>
+        <span class="feat-desc">Reads carrier quotes and invoices, checks the arithmetic, and flags what needs a person.</span>
+      </a>
+      <a class="feat" href="#trailpeak">
+        <span class="feat-name">TrailPeak Support Agent</span>
+        <span class="feat-desc">A support agent that answers from documents and live tools, and reads photos.</span>
+      </a>
+    </div>
   </section>
 
   <div class="wrap">
@@ -98,7 +85,7 @@
       <h2 id="h-projects">Projects</h2>
       <div class="content">
 
-        <article class="project">
+        <article class="project has-loop" id="freightlens">
           <header class="p-head">
             <h3>FreightLens</h3>
             <p class="status">Multi-tenant freight document intelligence. Deployed to AWS for testing, then torn down. All data is synthetic.</p>
@@ -126,6 +113,30 @@
             <li>Deployed with Terraform to ECS Fargate, ALB, RDS and S3, verified, then torn down, with a one-command redeploy.</li>
           </ul>
 
+          <figure class="loop p-loop" id="loop">
+            <div class="loop-head">
+              <p class="loop-title">Example: a misread total, caught by code</p>
+              <button class="replay" type="button" id="replay">Replay</button>
+            </div>
+
+            <div class="doc" id="doc" data-state="idle" role="group" aria-label="Synthetic carrier invoice">
+              <div class="doc-row"><span>Ocean freight</span><span>3,200.00</span></div>
+              <div class="doc-row"><span>Terminal handling</span><span>650.00</span></div>
+              <div class="doc-row"><span>Documentation</span><span>345.00</span></div>
+              <div class="doc-row total"><span>Total printed on the invoice</span><span>USD 4 195.00</span></div>
+            </div>
+
+            <ol class="trace">
+              <li class="step model"><span class="who">Model</span><p>Reads the total as <b>195.00</b>.</p></li>
+              <li class="step code bad"><span class="who">Code</span><p>The lines add up to <b>4,195.00</b>, not 195.00. Mismatch.</p></li>
+              <li class="step code"><span class="who">Code</span><p>Sends the model a hint made of facts only: the lines add up to 4,195.00.</p></li>
+              <li class="step model"><span class="who">Model</span><p>Reads the total again: <b>4,195.00</b>.</p></li>
+              <li class="step code ok"><span class="who">Code</span><p>4,195.00 matches the lines. The check passes.</p></li>
+            </ol>
+
+            <figcaption>The repair loop in FreightLens, with simplified example numbers based on a synthetic test case. After three reads without a match, the document goes to a person.</figcaption>
+          </figure>
+
           <div class="p-results">
             <h4>Results on 90 synthetic documents</h4>
             <dl class="results">
@@ -145,7 +156,7 @@
           </figure>
         </article>
 
-        <article class="project">
+        <article class="project" id="trailpeak">
           <header class="p-head">
             <h3>TrailPeak Support Agent</h3>
             <p class="status">RAG agent for a fictional outdoor-gear store. Deployed to AWS with Terraform and CI/CD.</p>
@@ -185,9 +196,9 @@
             <p class="note">Scores come from the project's golden question set about a fictional store. I use them to catch regressions and compare prompts, not as a benchmark.</p>
           </div>
 
-          <figure class="wide p-fig">
-            <img src="assets/img/trailpeak-ui.jpg" width="1200" height="735" loading="lazy" alt="TrailPeak web UI answering how much a rain jacket and trekking poles cost together: a trail of steps (searched documents, two live stock checks, added the prices), the answer, two product cards with price and stock, and a source chip.">
-            <figcaption>The web UI shows each step the agent takes, the live stock checks, and the sources behind the answer.</figcaption>
+          <figure class="wide split p-fig">
+            <img src="assets/img/trailpeak-ui.jpg" width="1152" height="1482" loading="lazy" alt="TrailPeak web UI: a customer attaches a photo of an orange tent and asks, Do you have something like this? The trail shows the photo being read and the store documents searched, and the answer recommends the AlpinePeak 2-Person Tent. The follow-up, yes what's the price, adds a live stock check and a product card showing $329.00 in stock, with source chips under each answer.">
+            <figcaption>A photo question and a follow-up in the web UI. It shows each step the agent takes (reading the photo, searching the store documents, checking live stock) and the sources behind each answer.</figcaption>
           </figure>
         </article>
 

@@ -116,6 +116,14 @@ a:hover { color: var(--code); }
 .elsewhere a { color: var(--muted); }
 .elsewhere a:hover { color: var(--code); }
 
+/* Featured projects in the hero */
+.featured { align-self: end; border-top: 1px solid var(--line); }
+.feat { display: block; padding: 1.4rem 0; border-bottom: 1px solid var(--line); color: var(--text); text-decoration: none; }
+.feat:hover { color: var(--text); }
+.feat-name { display: block; font-family: var(--display); font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.6rem); line-height: 1.2; letter-spacing: -0.02em; }
+.feat:hover .feat-name { color: var(--code); }
+.feat-desc { display: block; margin-top: 0.35rem; max-width: 30rem; color: var(--muted); line-height: 1.55; }
+
 /* The repair-loop figure */
 .loop {
   background: var(--surface);
@@ -203,6 +211,16 @@ a:hover { color: var(--code); }
 .p-points { grid-area: points; }
 .p-results { grid-area: results; }
 .p-fig { grid-area: fig; }
+.p-loop { grid-area: loop; margin-top: 2rem; max-width: 42rem; }
+.project.has-loop {
+  grid-template-areas:
+    "head    aside"
+    "lede    aside"
+    "points  aside"
+    "loop    aside"
+    "results aside"
+    "fig     fig";
+}
 
 .project h3 { font-family: var(--display); font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.1; letter-spacing: -0.028em; }
 .status { margin-top: 0.5rem; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
@@ -228,6 +246,9 @@ a:hover { color: var(--code); }
 .wide { margin-top: 2.25rem; }
 .wide img { width: 100%; border-radius: 12px; border: 1px solid var(--line); }
 .wide figcaption { margin-top: 0.7rem; color: var(--muted); font-size: 0.88rem; line-height: 1.55; max-width: 44rem; }
+/* A tall screenshot sits beside its caption instead of filling the full width */
+.wide.split { display: grid; grid-template-columns: minmax(0, 36rem) minmax(0, 1fr); gap: 1.25rem 2.5rem; align-items: end; }
+.wide.split figcaption { margin-top: 0; max-width: 20rem; }
 
 .more { margin-top: clamp(3rem, 6vw, 4.5rem); padding-top: clamp(3rem, 6vw, 4.5rem); border-top: 1px solid var(--line); }
 .more-h { font-family: var(--display); font-weight: 600; font-size: 1.4rem; letter-spacing: -0.02em; }
@@ -274,6 +295,12 @@ a:hover { color: var(--code); }
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "head" "lede" "aside" "points" "results" "fig";
   }
+  .project.has-loop {
+    grid-template-areas: "head" "lede" "aside" "points" "loop" "results" "fig";
+  }
+  .wide.split { grid-template-columns: minmax(0, 1fr); }
+  .wide.split img { max-width: 36rem; }
+  .wide.split figcaption { margin-top: 0.7rem; max-width: 36rem; }
   .p-aside { max-width: 24rem; margin-top: 1.5rem; }
 }
 
